@@ -68,9 +68,6 @@ public:
     AVLTree();
     AVLTree(int valor);
 
-    // Calcular altura del arbol
-    int getHeight();
-
     // Insertar el valor al AVL
     bool insert(int val);
 
@@ -184,8 +181,8 @@ void AVLTree::balanceAtNode(Node *n) {
         }
 
         rotateLeft(n);
-    } // if
-} // balanceAtNode
+    }
+}
 
 
 // Encontrar el nodo que tiene la data
@@ -226,6 +223,7 @@ bool AVLTree::insert(int val) {
         Node *added_node = nullptr;
 
         Node *temp = root;
+
         while (temp != nullptr && added_node == nullptr) {
 
             if (val < temp->data)
@@ -240,32 +238,50 @@ bool AVLTree::insert(int val) {
                     temp->updateHeight();
                     added_node = temp->left_child;
 
-                } else{
+                    if(temp->right_child == nullptr)
+                    {
+                        auto *tempNodeRangetree = new Node(val);
+                        tempNodeRangetree->parent = tempNode;
+                        tempNode->right_child = tempNodeRangetree;
+                        tempNodeRangetree->updateHeight();
+                        added_node = tempNode->right_child;
+
+                    }
+
+                }
+                else{
                     temp = temp->left_child;
                 }
 
 
-            } else if (val > temp->data)
+            }
+            else if (val >= temp->data)
             {
                 if (temp->right_child == nullptr)
                 {
 
                     auto *tempNode = new Node(val);
-
                     tempNode->parent = temp;
                     temp->right_child = tempNode;
                     temp->updateHeight();
                     added_node = temp->right_child;
 
-                } else{
+                    if(temp->left_child == nullptr)
+                    {
+                        auto *tempNodeRangetree = new Node(temp->data);
+                        tempNodeRangetree->parent = tempNode;
+                        tempNode->left_child = tempNodeRangetree;
+                        tempNodeRangetree->updateHeight();
+                        added_node = tempNode->left_child;
+                    }
+
+                }
+                else{
                     temp = temp->right_child;
                 }
 
-            } else
-                return false;
+            }
         }
-
-
         temp = added_node;
         while(temp != nullptr)
         {
@@ -303,9 +319,6 @@ void AVLTree::print() {
 void AVLTree::printSubtree(Node *subtree, int depth,
                            int level, bool first) {
 
-    // If we need to go deeper in the subtree, do so.
-    // If the subtree is empty, pass it down, otherwise
-    // pass both left and right subtrees.
     if (depth > 0) {
         if (subtree == nullptr) {
             printSubtree(subtree, depth-1, level, first);
@@ -315,7 +328,7 @@ void AVLTree::printSubtree(Node *subtree, int depth,
                          level, first);
             printSubtree(subtree->right_child, depth-1,
                          level, false);
-        } // if
+        }
 
 
     } else if (subtree == nullptr)
@@ -389,8 +402,6 @@ void AVLTree::rotateLeft(Node *n) {
 
 // Rotacion Derecha
 void AVLTree::rotateRight(Node *n) {
-
-
     string lado;
 
     Node *p = n->parent;
@@ -404,10 +415,12 @@ void AVLTree::rotateRight(Node *n) {
         lado = "right";
     }
 
+    Node *temp = n->left_child;
 
-    Node *temp = n->right_child;
+    auto tempNode = temp->right_child;
 
-    auto tempNode = temp->left_child;
+    if(tempNode )
+
 
     if (tempNode->left_child != nullptr) {
         tempNode->parent = temp->parent;
@@ -417,7 +430,7 @@ void AVLTree::rotateRight(Node *n) {
     n->updateHeight();
 
 
-    temp->left_child = n;
+    temp->right_child = n;
     temp->updateHeight();
 
 
@@ -462,14 +475,11 @@ int main() {
 
     AVLTree *tree = new AVLTree();
 
-    tree->insert(10);
-    tree->insert(2);
-    tree->insert(40);
-    tree->insert(76);
     tree->insert(6);
-    tree->insert(100);
-    tree->insert(150);
-    tree->insert(160);
+    tree->insert(17);
+    tree->insert(20);
+    tree->insert(15);
+
     tree->print();
 
     //Poner las referencias bibliograficas(la implementacion y usamos sus dos
