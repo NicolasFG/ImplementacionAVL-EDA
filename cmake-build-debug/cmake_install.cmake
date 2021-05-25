@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Usuario/CLionProjects/AVL_TREE
+# Install script for directory: C:/Users/Usuario/CLionProjects/Range_tree_2D
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/AVL_TREE")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Range_tree_2D")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Usuario/CLionProjects/AVL_TREE/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Usuario/CLionProjects/Range_tree_2D/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

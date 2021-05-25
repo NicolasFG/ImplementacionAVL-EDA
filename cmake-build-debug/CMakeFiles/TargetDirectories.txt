@@ -1,3 +1,3 @@
-C:/Users/Usuario/CLionProjects/AVL_TREE/cmake-build-debug/CMakeFiles/AVL_TREE.dir
-C:/Users/Usuario/CLionProjects/AVL_TREE/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Usuario/CLionProjects/AVL_TREE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Usuario/CLionProjects/Range_tree_2D/cmake-build-debug/CMakeFiles/Range_tree_2D.dir
+C:/Users/Usuario/CLionProjects/Range_tree_2D/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Usuario/CLionProjects/Range_tree_2D/cmake-build-debug/CMakeFiles/rebuild_cache.dir

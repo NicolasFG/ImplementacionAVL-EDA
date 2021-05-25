@@ -126,5 +126,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/AVL_TREE.dir/DependInfo.cmake"
+  "CMakeFiles/Range_tree_2D.dir/DependInfo.cmake"
   )

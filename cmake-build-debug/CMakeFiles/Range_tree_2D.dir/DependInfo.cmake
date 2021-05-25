@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Usuario/CLionProjects/AVL_TREE/main.cpp" "C:/Users/Usuario/CLionProjects/AVL_TREE/cmake-build-debug/CMakeFiles/AVL_TREE.dir/main.cpp.obj"
+  "C:/Users/Usuario/CLionProjects/Range_tree_2D/main.cpp" "C:/Users/Usuario/CLionProjects/Range_tree_2D/cmake-build-debug/CMakeFiles/Range_tree_2D.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

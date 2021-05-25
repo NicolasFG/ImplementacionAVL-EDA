@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AVL_TREE.iml" filepath="$PROJECT_DIR$/.idea/AVL_TREE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Range_tree_2D.iml" filepath="$PROJECT_DIR$/.idea/Range_tree_2D.iml" />
     </modules>
   </component>
 </project>

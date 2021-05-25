@@ -6,9 +6,27 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Usuario/CLionProjects/AVL_TREE/main.cpp
+C:/Users/Usuario/CLionProjects/Range_tree_2D/main.cpp
 iostream
 -
 iomanip
+-
+vector
+-
+algorithm
+-
+math.h
+-
+fstream
+-
+string
+-
+sstream
+-
+vector
+-
+map
+-
+stack
 -
 
